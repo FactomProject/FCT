@@ -1,18 +1,20 @@
 ---
 description: Command reference for the Factom CLI
 ---
+
 # Factom CLI Commands
 
-```text
+<i>factom-cli</i> is a command line interface program for interacting with <i>factomd</i>  and <i>factom-walletd</i>.
+
+```bash
 factom-cli [OPTIONS] SUBCOMMAND [OPTIONS]
 ```
-<i>factom-cli</i> is a command line interface program for interacting with <i>factomd</i>  and <i>factom-walletd</i>.
 
 ## Flags
 
 ### -f
 
-```text
+```bash
 $ echo hello | factom-cli addchain -f -n moe -n larry \
  EC2DKSYyRcNWf7RS963VFYgMExoHRYLHVeCfQ9PGPmNzwexample
 ```
@@ -21,7 +23,7 @@ The f flag, used with the `addchain`, `addentry`, `buyec`, `composechain`, `comp
 
 ### -q
 
-```text
+```bash
 $ echo goodbye | factom-cli addentry -q -n moe -n larry -e curly \
  EC2DKSYyRcNWf7RS963VFYgMExoHRYLHVeCfQ9PGPmNzwexample
 ```
@@ -31,7 +33,7 @@ The q flag specifies "quiet" execution of the `addchain`, `addentry`, `addtxecou
 
 ### -e -x
 
-```text
+```bash
 $ factom-cli addentry [-fq] [-n NAME1 -h HEXNAME2 ...|-c CHAINID] \
 [-e EXTID1 -e EXTID2 -x HEXEXTID ...] [-CET] ECADDRESS <STDIN>
 ```
@@ -40,7 +42,7 @@ The `addentry` subcommands support the `-e` and `-x` flags for adding external i
 
 ### -n -h
 
-```text
+```bash
 $ factom-cli get chainhead -n test -h 3031
 ```
 
@@ -48,7 +50,7 @@ The `get firstentry`, `get chainhead`, and `get allentries` subcommands support 
 
 ### -r
 
-```text
+```bash
 $ factom-cli sendfct -r $my_factoid_address factom.michaeljbeam.me
 ```
 
@@ -56,7 +58,7 @@ The r flag tells factom-cli to try and resolve a public Factoid or Entry Credit 
 
 ### -C
 
-```text
+```bash
 $ echo hello | factom-cli addchain -n moe -n larry -C \
  EC2DKSYyRcNWf7RS963VFYgMExoHRYLHVeCfQ9PGPmNzwexample
 ```
@@ -65,7 +67,7 @@ The C flag, used with the `addchain` subcommand, limits the subcommand output to
 
 ### -E
 
-```text
+```bash
 $ echo goodbye | factom-cli addentry -n moe -n larry -e curly -E \
  EC2DKSYyRcNWf7RS963VFYgMExoHRYLHVeCfQ9PGPmNzwexample
 ```
@@ -74,7 +76,7 @@ The E flag, used with the `addchain` and `addentry` subcommands, limits the subc
 
 ### -T
 
-```text
+```bash
 $ factom-cli get pendingtransactions -T
 ```
 
@@ -84,7 +86,7 @@ The T flag, used with the `addchain`, `addentry`, `buyec`, `get pendingtransacti
 
 ### addchain
 
-```text
+```bash
 factom-cli addchain [-fq] [-n NAME1 -n NAME2 -h HEXNAME3 ] [-CET] \
 ECADDRESS <STDIN>
 ```
@@ -102,7 +104,7 @@ Optional output flags will display only specific information used for scripting
  
 ### addentry
 
-```text
+```bash
 factom-cli addentry [-fq] [-n NAME1 -h HEXNAME2 ...|-c CHAINID] \
  [-e EXTID1 -e EXTID2 -x HEXEXTID ...] [-CET] ECADDRESS <STDIN>
 ```
@@ -118,49 +120,49 @@ Optional output flags will display only specific information used for scripting
 
 ### addtxecoutput
 
-```text
+```bash
 factom-cli addtxecoutput [-rq] TXNAME ADDRESS AMOUNT
 ```
 Add an Entry Credit output to a transaction in the wallet. `-r` Netki DNS resolve. `-q` quiet.
 
 ### addtxfee
 
-```text
+```bash
 factom-cli addtxfee [-q] TXNAME ADDRESS
 ```
 Add the transaction fee to an input of a transaction in the wallet. `-q` quiet.
 
 ### addtxinput
 
-```text
+```bash
 factom-cli addtxinput [-q] TXNAME ADDRESS AMOUNT
 ```
 Add a Factoid input to a transaction in the wallet. `-q` quiet.
 
 ### addtxoutput
 
-```text
+```bash
 factom-cli addtxoutput [-rq] TXNAME ADDRESS AMOUNT
 ```
 Add a Factoid output to a transaction in the wallet. `-r` Netki DNS resolve. `-q` quiet.
 
 ### backupwallet
 
-```text
+```bash
 factom-cli backupwallet
 ```
 Backup the running wallet
 
 ### balance
 
-```text
+```bash
 factom-cli balance [-r] ADDRESS
 ```
 If this is an EC Address, returns the number of Entry Credits. If this is a Factoid Address, returns the Factoid balance.
 
 ### balancetotals
 
-```text
+```bash
 factom-cli balancetotals [-FS -FA -ES -EA]
 ```
 This is the total number of Factoids and Entry Credits in the wallet
@@ -177,14 +179,14 @@ Optional output flags will display only specific information used for scripting
 
 ### buyec
 
-```text
+```bash
 factom-cli buyec [-fqrT] FCTADDRESS ECADDRESS ECAMOUNT
 ```
 Buy ECAMOUNT number of entry credits. -f force. -q quiet. `-r` Netki DNS resolve. `-T` TxID.
 
 ### composechain
 
-```text
+```bash
 $ factom-cli composechain [-f] [-n NAME1 -n NAME2 -h HEXNAME3 ] \
 ECADDRESS <STDIN>
 ```
@@ -192,7 +194,7 @@ Create API calls to create a new Factom Chain. Read data for the First Entry fro
 
 ### composeentry
 
-```text
+```bash
 $ factom-cli composeentry [-f] [-n NAME1 -h HEXNAME2 ...|-c CHAINID] \
 [-e EXTID1 -e EXTID2 -x HEXEXTID ...] ECADDRESS <STDIN>
 ```
@@ -200,25 +202,25 @@ Create API calls to create a new Factom Entry. Read data for the Entry from stdi
 
 ### composetx
 
-```text
+```bash
 $ factom-cli composetx TXNAME
 ```
 Compose a wallet transaction into a JSON RPC object
 
 ### diagnostics
-```text
+```bash
 $ factom-cli diagnostics [server|network|sync|election|authset]
 ```
 Get diagnostic information about the Factom network
 
 ### diagnostics authset
-```text
+```bash
 $ factom-cli diagnostics authset
 ```
 Get diagnostic information about the Factom authorized servers
 
 ### diagnostics election
-```text
+```bash
 $ factom-cli diagnostics election {-PVFIR]
 ```
 Get diagnostic information about the Factom network election process
@@ -236,7 +238,7 @@ Optional output flags will display only specific information used for scripting
 **-V**	display only the VM Index
 
 ### diagnostics network
-```text
+```bash
 $ factom-cli diagnostics network [-LMDPHTB]
 ```
 Get diagnostic information about the Factom network
@@ -259,7 +261,7 @@ Optional output flags will display only specific information used for scripting
 
 
 ### diagnostics server
-```text
+```bash
 $ factom-cli diagnostics server [-NIKR]
 ```
 Get diagnostic information about the Factom API server
@@ -275,7 +277,7 @@ Optional output flags will display only specific information used for scripting
 **-R**	display only the role of the API server
 
 ### diagnostics sync
-```text
+```bash
 $ factom-cli diagnostics sync [-SRE]
 ```
 Get diagnostic information about the network syncing
@@ -290,28 +292,28 @@ Optional output flags will display only specific information used for scripting
 
 ### ecrate
 
-```text
+```bash
 factom-cli ecrate
 ```
 It takes this many Factoids to buy an Entry Credit. Displays the larger between current and future rates. Also used to set Factoid fees.
 
 ### exportaddresses
 
-```text
+```bash
 factom-cli exportaddresses
 ```
 List the private addresses stored in the wallet
 
 ### exportidentitykeys
 
-```text
+```bash
 factom-cli exportidentitykeys
 ```
 List the identity key pairs (public and private) stored in the wallet
 
 ### get
 
-```text
+```bash
 factom-cli get allentries|authorities|chainhead|currentminute|ablock|dblock|eblock|ecblock|fblock|
 entry|firstentry|head|heights|pendingentries|pendingtransactions|raw|tps|walletheight
 
@@ -319,13 +321,13 @@ entry|firstentry|head|heights|pendingentries|pendingtransactions|raw|tps|walleth
 Get data about Factom Chains, Entries, and Blocks
 
 ### get abheight 
-```text
+```bash
 factom-cli get abheight HEIGHT -r (to suppress Raw Data)
 ```
 Get Admin Block by height
 
 ### get ablock
-```text 
+```bash 
 factom-cli get ablock [-RDBPL] HEIGHT|KEYMR
 ```
 Get an Admin Block from factom by its Key Merkel Root or by its Height
@@ -344,28 +346,28 @@ Optional output flags will display only specific information used for scripting
 
 ### get allentries
 
-```text
+```bash
 factom-cli get allentries [-n NAME1 -N HEXNAME2 ...] CHAINID
 ```
 Get all of the Entries in a Chain
 
 ### get authorities
 
-```text
+```bash
 factom-cli get authorities
 ```
 Get information about the authority servers on the Factom network
 
 ### get chainhead
 
-```text
+```bash
 factom-cli get chainhead [-n NAME1 -N HEXNAME2 ...] CHAINID
 ```
 Get ebhead by chainid
 
 ### get currentminute
 
-```text
+```bash
 $ factom-cli get currentminute [-BDFLMNRSTX]
 LeaderHeight: 8596
 DirectoryBlockHeight: 8596
@@ -409,14 +411,14 @@ Optional output flags will display only specific information used for scripting
 **-R** display only the Round timeout
 
 ### get dbheight
-```text 
+```bash 
 factom-cli get dbheight HEIGHT -r (to suppress Raw Data)
 ```
 Get Directory Block by height
 
 ### get dblock
 
-```text
+```bash
 factom-cli get dblock [-RHKAVNBPFTDC] HEIGHT|KEYMR
 ```
 Get a Directory Block from factom by its Key Merkel Root or by its Height
@@ -449,20 +451,20 @@ Optional output flags will display only specific information used for scripting
 
 ### get eblock
 
-```text
+```bash
 factom-cli get eblock KEYMR
 ```
 Get eblock by Merkle root
 
 ### get echeight
-```text 
+```bash 
 factom-cli get echeight HEIGHT -r (to suppress Raw Data)
 ```
 Get Entry Credit Block by height
 
 ### get ecblock
 
-```text
+```bash
 factom-cli get ecblock [-RBPLDAHF] HEIGHT|KEYMR
 ```
 Get ecblock by Key Merkle root or by height
@@ -487,19 +489,19 @@ Optional output flags will display only specific information used for scripting
 
 ### get entry
 
-```text
+```bash
 factom-cli get entry [-RC] HASH
 ```
 Get Entry by Hash. -R raw entry. -C ChainID
 
 ### get fbheight
-```text 
+```bash 
 factom-cli get fbheight HEIGHT -r (to suppress Raw Data)
 ```
 Get Factoid Block by height
 
 ### get fblock
-```text 
+```bash 
 factom-cli get fblock [-RBPLED] KEYMR|HEIGHT
 ```
 Get a Factoid Block by its Key Merkle Root or Height
@@ -519,14 +521,14 @@ Optional output flags will display only specific information used for scripting
 
 ### get firstentry
 
-```text
+```bash
 factom-cli get firstentry [-n NAME1 -N HEXNAME2 ...] CHAINID [-REC]
 ```
 Get the first Entry in a Chain. -R RawEntry. -E EntryHash. -C ChainID
 
 ### get head
 
-```text
+```bash
 factom-cli get head [-RHKAVNBPFTDC]
 ```
 Get the latest completed directory block
@@ -559,7 +561,7 @@ Optional output flags will display only specific information used for scripting
 
 ### get heights
 
-```text
+```bash
 $ factom-cli get heights [-DLBE]
 DirectoryBlockHeight: 10000
 LeaderHeight: 10001
@@ -582,25 +584,25 @@ Optional output flags will display only specific information used for scripting
 
 ### get pendingentries
 
-```text
+```bash
 factom-cli get pendingentries [-E]
 ```
 Get all pending entries, which may not yet be written to blockchain. -E EntryHash.
 
 ### get pendingtransactions
-```text
+```bash
 factom-cli get pendingtransactions [-T]
 ```
 Get all pending factoid transacitons, which may not yet be written to blockchain. -T TxID.
 
 ### get raw
-```text
+```bash
 factom-cli get raw HASH
 ```
 Returns a raw hex representation of a block, transaction, entry, or commit
 
 ### get tps
-```text
+```bash
 factom-cli get tps [-IT]
 ```
 Get the current instant and total average rate of Transactions Per Second.
@@ -612,14 +614,14 @@ Optional output flags will display only specific information used for scripting
 **-T**	display only the total averaged TPS rate
 
 ### get walletheight
-```text
+```bash
 factom-cli get walletheight
 ```
 Get the number of factoid blocks factom-walletd has cached
 
 ### identity
 
-```text
+```bash
 factom-cli identity addchain|addkeyreplacement|addattribute| \
 addattributeendorsement|composechain|composekeyreplacement| \
 composeattribute|composeattributeendorsement|getactivekeys|getactivekeysatheight
@@ -627,7 +629,7 @@ composeattribute|composeattributeendorsement|getactivekeys|getactivekeysatheight
 Used with subcommands to create/manage Factom Identity Chains, their currently valid keys, attributes, and attribute endorsements
 
 ### identity addchain
-```text
+```bash
 factom-cli identity addchain [-fq] [-n NAME1 -n NAME2] \
 [-k PUBKEY1 -k PUBKEY2] [-CET] ECADDRESS
 ```
@@ -637,7 +639,7 @@ Create a new Identity Chain. Use the Entry Credits from the specified address.
 Using the optional output flags allows you to get back information about the newly created chain and the transaction that created it. Those flags are: `-C` ChainID. `-E` EntryHash. `-T` TxID.
 
 ### identity addkeyreplacement
-```text
+```bash
 factom-cli identity addkeyreplacement [-fq] \
  [-c CHAINID | -n NAME1 -n NAME2 ... -n NAMEN] \
  --oldkey PUBKEY --newkey PUBKEY --signerkey PUBKEY ECADDRESS [-CET]
@@ -648,7 +650,7 @@ Create a new Identity Key Replacement Entry using the Entry Credits from the spe
 Using the optional output flags allows you to get back information about the newly created entry and the transaction that created it. Those flags are: `-C` ChainID. `-E` EntryHash. `-T` TxID.
 
 ### identity addattribute
-```text
+```bash
 factom-cli identity addattribute [-fq] -c CHAINID \
 -creceiver CHAINID -csigner CHAINID -signerkey PUBKEY \
 -attribute ATTRIBUTE_JSON_ARRAY ECADDRESS [-CET]
@@ -663,7 +665,7 @@ The `-attribute` flag must be followed by a JSON array of sub-attributes (key:va
 ```-attribute `[{"key":KEY1,"value":VALUE1},{"key":KEY2,"value":VALUE2},{"key":KEYN,"value":VALUEN}]` ```
 
 ### identity addattributeendorsement
-```text
+```bash
 factom-cli identity addattributeendorsement [-fq] -c CHAINID \
 -csigner CHAINID -signerkey PUBKEY -entryhash ENTRYHASH ECADDRESS [-CET]
 ```
@@ -673,7 +675,7 @@ Create a new Endorsement Entry for the Identity Attribute at the given entry has
 Using the optional output flags allows you to get back information about the newly created entry and the transaction that created it. Those flags are: `-C` ChainID. `-E` EntryHash. `-T` TxID.
 
 ### identity composechain
-```text
+```bash
 factom-cli identity composechain [-f] [-n NAME1 -n NAME2] \
 [-k PUBKEY1 -k PUBKEY2] ECADDRESS
 ```
@@ -681,7 +683,7 @@ factom-cli identity composechain [-f] [-n NAME1 -n NAME2] \
 Create API calls to create a new Factom Identity Chain. Use the Entry Credits from the specified address.
 
 ### identity composekeyreplacement
-```text
+```bash
 factom-cli identity composekeyreplacement [-f] \
 [-c CHAINID | -n NAME1 -n NAME2 ... -n NAMEN] \
 --oldkey PUBKEY --newkey PUBKEY --signerkey PUBKEY ECADDRESS
@@ -690,7 +692,7 @@ factom-cli identity composekeyreplacement [-f] \
 Create API calls to create a new Identity key replacement entry using the Entry Credits from the specified address. The oldkey is replaced by the newkey, and signerkey (same or higher priority as oldkey) authorizes the replacement.
 
 ### identity composeattribute
-```text
+```bash
 factom-cli identity composeattribute [-f] -c CHAINID \
 -creceiver CHAINID -csigner CHAINID -signerkey PUBKEY \
 -attribute ATTRIBUTE_JSON_ARRAY ECADDRESS
@@ -703,7 +705,7 @@ The `-attribute` flag must be followed by a JSON array of sub-attributes (key:va
 ```-attribute `[{"key":KEY1,"value":VALUE1},{"key":KEY2,"value":VALUE2},{"key":KEYN,"value":VALUEN}]` ```
 
 ### identity composeattributeendorsement
-```text
+```bash
 factom-cli identity composeattributeendorsement [-f] \
 -c CHAINID -csigner CHAINID -signerkey PUBKEY -entryhash ENTRYHASH ECADDRESS
 ```
@@ -711,14 +713,14 @@ factom-cli identity composeattributeendorsement [-f] \
 Compose API calls to create a new Endorsement Entry for the Identity Attribute at the given entry hash. Uses the Entry Credits from the specified address.
 
 ### identity getactivekeys
-```text
+```bash
 factom-cli identity getactivekeys [-c CHAINID | -n NAME1 -n NAME2 ... -n NAMEN]
 ```
 
 Gets the set of identity public keys that are active for the given identity chain at the highest known block height.
 
 ### identity getactivekeysatheight
-```text
+```bash
 factom-cli identity getactivekeysatheight [-c CHAINID | -n NAME1 -n NAME2 ... -n NAMEN] HEIGHT
 ```
 
@@ -726,119 +728,119 @@ Gets the set of identity public keys that were active for the given identity cha
 
 ### importaddress
 
-```text
+```bash
 factom-cli importaddress ADDRESS [ADDRESS...]
 ```
 Import one or more secret keys into the wallet
 
 ### importidentitykeys
 
-```text
+```bash
 factom-cli importidentitykeys SECKEY [SECKEY...]
 ```
 Import one or more identity keys into the wallet from the specified idsec keys
 
 ### importwords
 
-```text
+```bash
 factom-cli importwords '12WORDS'
 ```
 Import 12 words from Koinify sale into the Wallet
 
 ### listaddresses
 
-```text
+```bash
 factom-cli listaddresses
 ```
 List the addresses stored in the wallet
 
 ### listidentitykeys
 
-```text
+```bash
 factom-cli listidentitykeys
 ```
 List the public identity keys stored in the wallet
 
 ### listtxs
 
-```text
+```bash
 factom-cli listtxs [tmp|all|address|id|range]
 ```
 List transactions from the wallet or the Factoid Chain
 
 ### listtxs address
 
-```text
+```bash
 factom-cli listtxs address [-T] ECADDRESS|FCTADDRESS
 ```
 List the transaction from the Factoid Chain with a specific address. This command will only list confirmed transactions.`-T` TxID.
 
 ### listtxs [all]
 
-```text
+```bash
 factom-cli listtxs [all] [-T]
 ```
 List all transactions from the Factoid Chain. This command will only list confirmed transactions.`-T` TxID.
 
 ### listtxs id
 
-```text
+```bash
 factom-cli listtxs id [-T] TXID
 ```
 List transaction from the Factoid Chain. This command will only list confirmed transactions.`-T` TxID.
 
 ### listtxs name
 
-```text
+```bash
 factom-cli listtxs name [-T] TXID
 ```
 Show a current working transaction in the wallet. `-T` TxID.
 
 ### listtxs range
 
-```text
+```bash
 factom-cli listtxs range [-T] START END
 ```
 List the transactions from the Factoid Chain within the specified range. This command will only list confirmed transactions.
 
 ### listtxs tmp
 
-```text
+```bash
 factom-cli listtxs tmp
 ```
 List current working transactions in the wallet
 
 ### newecaddress
 
-```text
+```bash
 factom-cli newecaddress
 ```
 Generate a new Entry Credit Address in the wallet
 
 ### newfctaddress
 
-```text
+```bash
 factom-cli newfctaddress
 ```
 Generate a new Factoid Address in the wallet
 
 ### newidentitykey
 
-```text
+```bash
 factom-cli newidentitykey
 ```
 Generates a new identity key in the wallet
 
 ### newtx
 
-```text
+```bash
 factom-cli newtx [-q] TXNAME
 ```
 Create a new transaction in the wallet
 
 ### properties
 
-```text
+```bash
 factom-cli properties [-CFAWL]
 ```
 Get version information about facotmd and the factom wallet
@@ -857,63 +859,63 @@ Optional output flags will display only specific information used for scripting
 
 ### receipt
 
-```text
+```bash
 factom-cli receipt ENTRYHASH
 ```
 Returns a Receipt for a given Entry
 
 ### replaydbstates
 
-```text
+```bash
 factom-cli replaydbstates STARTHEIGHT ENDHEIGHT
 ```
 Emit DBStateMsgs over the LiveFeed API between two specifed block heights
 
 ### rmaddress
 
-```text
+```bash
 factom-cli rmaddress ADDRESS
 ```
 Removes the public and private key from the wallet for the address specified.
 
 ### rmidentitykey
 
-```text
+```bash
 factom-cli rmidentitykey PUBKEY
 ```
 Removes the identity key pair from the wallet for the specified idpub key.
 
 ### rmtx
 
-```text
+```bash
 factom-cli rmtx TXNAME
 ```
 Remove a transaction in the wallet
 
 ### sendfct
 
-```text
+```bash
 factom-cli sendfct [-fqrT] FROMADDRESS TOADDRESS AMOUNT
 ```
 Send Factoids between 2 addresses. `-f` force. `-q` quiet. `-r` Netki DNs resolve. `-T` TxID. 
 
 ### sendtx
 
-```text
+```bash
 factom-cli sendtx [-fqT] TXNAME
 ```
 Send a Transaction to Factom. `-f` force. `-q` quiet. `-T` TxID.
 
 ### signtx
 
-```text
+```bash
 factom-cli signtx [-fqT] TXNAME
 ```
 Sign a transaction in the wallet. `-f` force. `-q` quiet. `-T` TxID.
 
 ### status
 
-```text
+```bash
 factom-cli status [-TSUD] TxID|FullTx
 ```
 Returns information about a factoid transaction, or an entry / entry credit transaction
@@ -930,14 +932,14 @@ Optional output flags will display only specific information used for scripting
 
 ### subtxfee
 
-```text
+```bash
 factom-cli subtxfee TXNAME ADDRESS
 ```
 Subtract the transaction fee from an output of a transaction in the wallet
 
 ### unlockwallet
 
-```text
+```bash
  factom-cli unlockwallet [-v] "passphrase" <seconds-to-unlock>
 ```
 Unlock the wallet for some number of seconds; must be an encrypted wallet. -v verbose. (Note: it is recommended that you run the command with a leading space to prevent writing the password to the command line history.)
