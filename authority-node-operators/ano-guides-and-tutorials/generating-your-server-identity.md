@@ -45,14 +45,12 @@ nano .profile
 
 and add the following lines to the bottom:
 
-{% tabs %}
-{% tab title=".profile" %}
+{% code title=".profile" %}
 ```bash
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 {% hint style="warning" %}
 Open a new terminal for these changes to take effect. You might even need to re-log.

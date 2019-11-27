@@ -96,8 +96,7 @@ The version in the above command may be outdated, be sure to check what the [lat
 
 Now we want a wallet daemon running. You can easily just run factom-walletd above, but you might want to run it as a system service:
 
-{% tabs %}
-{% tab title="/etc/systemd/system/factom-walletd.service" %}
+{% code title="/etc/systemd/system/factom-walletd.service" %}
 ```bash
 [Unit]
 Description=Run the Factom Wallet service
@@ -115,8 +114,7 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ```bash
 sudo systemctl daemon-reload

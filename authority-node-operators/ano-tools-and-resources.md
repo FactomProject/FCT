@@ -26,9 +26,7 @@ Monitor your factom nodes with Grafana in conjunction with Prometheus and node\_
 
 ## Factom Protocol Metrics
 
-{% embed url="https://factoshi.io/" %}
+[Factoshi.io](https://factoshi.io)
 
 
-
-++
 

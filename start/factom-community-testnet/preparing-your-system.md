@@ -189,8 +189,7 @@ Now you should  have the files with the correct permissions set.
 
 Configure the docker daemon using a default config file, located at `/etc/docker/daemon.json` . Create this file if it doesn't exist. Copy the following into the file:
 
-{% tabs %}
-{% tab title="/etc/docker/daemon.json" %}
+{% code title="/etc/docker/daemon.json" %}
 ```bash
 {
   "tls": true,
@@ -200,8 +199,7 @@ Configure the docker daemon using a default config file, located at `/etc/docker
   "hosts": ["tcp://0.0.0.0:2376", "unix:///var/run/docker.sock"]
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 {% hint style="info" %}
 If your system has multiple IP addresses you can select which IP it should listen on by editing `"hosts".` 
@@ -215,15 +213,13 @@ sudo systemctl edit docker.service
 
  The above command creates an override directory at `/etc/systemd/system/docker.service.d/` and an override file called `override.conf` \(which is open on your terminal now\).  Copy and paste the following:
 
-{% tabs %}
-{% tab title="override.conf" %}
+{% code title="override.conf" %}
 ```bash
 [Service]
 ExecStart=
 ExecStart=/usr/bin/dockerd
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Exit and save the file. Now reload the docker configuration and the `docker.service`:
 
@@ -377,14 +373,12 @@ nano .profile
 
 and add the following lines to the bottom:
 
-{% tabs %}
-{% tab title=".profile" %}
+{% code title=".profile" %}
 ```bash
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 {% hint style="danger" %}
 Open a new terminal for these changes to take effect. You might even need to re-log.

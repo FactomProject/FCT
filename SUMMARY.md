@@ -47,8 +47,6 @@
 ## Technologies
 
 * [Tokenization](technologies/tokenization.md)
-* [Smart Contracts](technologies/smart-contracts.md)
-* [Digital Identities](technologies/digital-identities.md)
 * [Voting Protocols](technologies/voting-protocols.md)
 
 ## Protocol development

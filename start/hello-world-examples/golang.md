@@ -19,8 +19,7 @@ If you want to setup your own factomd node, head over to the [developer sandbox 
 
 Create a new `.go` file and import the FactomProject/factom package. Now in the `init()` function, you'll set the url for the live `factomd` instance you want to work with.
 
-{% tabs %}
-{% tab title="hello-world-factom" %}
+{% code title="hello-world-factom" %}
 ```go
 package main
 
@@ -34,8 +33,7 @@ func init() {
     factom.SetFactomdServer("https://api.factomd.net")
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### Writing data to a chain
 
@@ -66,8 +64,7 @@ To write your own data to the chain, construct a new Factom Entry with the follo
 
 See [here](https://developers.factomprotocol.org/start/factom-data-structures/user-elements#entry) for more specific details on what makes up an Entry.
 
-{% tabs %}
-{% tab title="hello-world-factom" %}
+{% code title="hello-world-factom" %}
 ```go
 ...
 
@@ -87,8 +84,7 @@ func main() {
     e.Content = []byte("Hello, Factom!")
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 {% hint style="info" %}
 Note that:
@@ -99,8 +95,7 @@ Note that:
 
 Now you'll have to commit the Entry. This is signed with the specified EC address and broadcast to the network. At this point, no one else in the factom network knows what your Entry actually contains, they can only see that you paid for the ability to publish content and that you provided a hash of that content. When you reveal the Entry, your content then becomes public and able to be checked against what you committed to publishing just before.
 
-{% tabs %}
-{% tab title="hello-world-factom" %}
+{% code title="hello-world-factom" %}
 ```go
 func main() {
     ...
@@ -117,8 +112,7 @@ func main() {
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Build and run the program, and it should print your transaction ID.
 
@@ -133,8 +127,7 @@ Copy the transaction ID and paste it into the block explorer. It'll show up in t
 
 Just like we did for writing something to an existing chain, we'll use the same commit-reveal scheme. Create an Entry, and give it a set of ExtIDs. Remember from earlier that since this is the first entry of a chain, the ExtIDs are used as the ChainName, which is in turn used to calculate the ChainID.
 
-{% tabs %}
-{% tab title="hello-world-factom" %}
+{% code title="hello-world-factom" %}
 ```go
 func main() {
     // TODO: don't store key in plaintext, use a more secure way
@@ -196,8 +189,7 @@ func ConstructChainID(chainName []string) string {
     return chain.ChainID
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Pick your own ChainName, run it a first time, and you should be able to [find your newly created chain](https://developers.factomprotocol.org/start/factom-explorer/usage#search-for-a-factom-chain) at the ChainID that is printed. If you run it a second time, another entry will be added to the chain that was just created.
 
