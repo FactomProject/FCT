@@ -20,7 +20,7 @@ Before you start, go to System Preferences/Security & Privacy, click on the lock
 
 Note that after running the Factom installer it is recommended you revert your Security & Privacy settings to their original state.
 
-Next, locate the `factom.mpkg.zip` file you just downloaded, double-click to unzip it, then double-click the `factom.mpkg` file to run the installer.
+Next, locate the `factom.mpkg.zip` file you just downloaded. Double-click to unzip it, then double-click the `factom.mpkg` file to run the installer.
 
 The installer will open, click continue.
 
