@@ -41,7 +41,7 @@ sudo apt-get upgrade
 Now, run the following command exactly :
 
 ```bash
-docker run -d --name "factomd" -v "factom_database:/root/.factom/m2" -v "factom_keys:/root/.factom/private" -p "8088:8088" -p "8090:8090" -p "8108:8108" -l "name=factomd" factominc/factomd:v6.3.1-alpine -startdelay=600 -faulttimeout=120 -config=/root/.factom/private/factomd.conf
+docker run -d --name "factomd" -v "factom_database:/root/.factom/m2" -v "factom_keys:/root/.factom/private" -p "8088:8088" -p "8090:8090" -p "8108:8108" -l "name=factomd" factominc/factomd:v6.5.0-alpine -startdelay=600 -faulttimeout=120 -config=/root/.factom/private/factomd.conf
 ```
 
 {% hint style="info" %}

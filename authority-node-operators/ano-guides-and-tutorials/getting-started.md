@@ -32,7 +32,7 @@ The specifications are subject to change at any time as the network matures.
 Setting up a factomd node is very easy, download the latest release by running the following:
 
 ```bash
-wget https://github.com/FactomProject/distribution/releases/download/v6.5.0/factom-amd64.deb
+wget https://github.com/FactomProject/distribution/releases/download/v6.1.0/factom-amd64.deb
 ```
 
 {% hint style="danger" %}
@@ -85,7 +85,7 @@ sudo cp factomd.conf /var/lib/docker/volumes/factom_keys/_data/factomd.conf
 Run `factomd` in Docker:
 
 ```bash
-docker run -d --name "factomd" -v "factom_database:/root/.factom/m2" -v "factom_keys:/root/.factom/private" -p "8088:8088" -p "8090:8090" -p "8108:8108" -l "name=factomd" factominc/factomd:v6.5.0-alpine -startdelay=600 -faulttimeout=120 -config=/root/.factom/private/factomd.conf
+docker run -d --name "factomd" -v "factom_database:/root/.factom/m2" -v "factom_keys:/root/.factom/private" -p "8088:8088" -p "8090:8090" -p "8108:8108" -l "name=factomd" factominc/factomd:v6.3.1-alpine -startdelay=600 -faulttimeout=120 -config=/root/.factom/private/factomd.conf
 ```
 
 {% hint style="danger" %}
