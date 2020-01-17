@@ -36,7 +36,34 @@ Python library for interacting with the `factomd` and `factom-walletd` APIs. The
 
 ### Rust
 
-[Rust client library](https://github.com/MitchellBerry/Factom-Client) for the `factomd` and `factom-walletd` APIs.
+Rust json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
+  
+[Rust Client Library](https://github.com/kompendium-llc/factom-rust-client)
 
+### Haskell
 
+Haskell json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
+  
+[Haskell Client Library  
+](https://github.com/kompendium-llc/factom-haskell-client)
+
+### PHP
+
+PHP json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
+  
+[PHP Client Library  
+](https://github.com/kompendium-llc/factom-php-client)
+
+### Ruby
+
+Ruby json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
+  
+[Ruby Client Library  
+](https://github.com/kompendium-llc/factom-ruby-client)
+
+### Swift
+
+Swift json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
+  
+[Swift Client Library](https://github.com/kompendium-llc/factom-swift-client)
 
