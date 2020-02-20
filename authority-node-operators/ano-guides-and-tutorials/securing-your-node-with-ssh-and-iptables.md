@@ -1,6 +1,6 @@
 # Securing your node with SSH and iptables
 
-[![Factom protocol: Securing your node with SSH and iptables](http://img.youtube.com/vi/VIr9OT7ZRp0/0.jpg)](https://www.youtube.com/watch?v=VIr9OT7ZRp0)
+[![](http://img.youtube.com/vi/7JBx-ZmBpz4/0.jpg)](http://www.youtube.com/watch?v=7JBx-ZmBpz4)
 
 {% hint style="info" %}
 This tutorial is fully covered in the video shown above.

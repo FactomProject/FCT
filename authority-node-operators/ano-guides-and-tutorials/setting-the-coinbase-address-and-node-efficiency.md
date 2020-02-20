@@ -1,6 +1,6 @@
 # Setting the coinbase address and node efficiency
 
-[![Factom protocol: Setting the coinbase address and node efficiency](http://img.youtube.com/vi/Q9AXt0UHoHM/0.jpg)](https://www.youtube.com/watch?v=Q9AXt0UHoHM)
+[![](http://img.youtube.com/vi/irlboOrHHcc/0.jpg)](http://www.youtube.com/watch?v=irlboOrHHcc)
 
 {% hint style="info" %}
 This tutorial is fully covered in the video shown above.

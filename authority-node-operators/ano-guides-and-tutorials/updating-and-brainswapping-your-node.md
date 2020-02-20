@@ -1,6 +1,6 @@
 # Updating and brainswapping your node
 
-[![Factom protocol: Updating and brainswapping your node](http://img.youtube.com/vi/od1P_QXk91M/0.jpg)](http://www.youtube.com/watch?v=od1P_QXk91M)
+[![](http://img.youtube.com/vi/GiMnJvvc3ng/0.jpg)](http://www.youtube.com/watch?v=GiMnJvvc3ng)
 
 {% hint style="info" %}
 This tutorial is fully covered in the video shown above.
@@ -41,7 +41,7 @@ sudo apt-get upgrade
 Now, run the following command exactly :
 
 ```bash
-docker run -d --name "factomd" -v "factom_database:/root/.factom/m2" -v "factom_keys:/root/.factom/private" -p "8088:8088" -p "8090:8090" -p "8108:8108" -l "name=factomd" factominc/factomd:v6.5.0-alpine -startdelay=600 -faulttimeout=120 -config=/root/.factom/private/factomd.conf
+docker run -d --name "factomd" -v "factom_database:/root/.factom/m2" -v "factom_keys:/root/.factom/private" -p "8088:8088" -p "8090:8090" -p "8108:8108" -l "name=factomd" factominc/factomd:v6.5.2-alpine -startdelay=600 -faulttimeout=120 -config=/root/.factom/private/factomd.conf
 ```
 
 {% hint style="info" %}
@@ -55,7 +55,7 @@ If you're updating or brain swapping a node on the test-net you need to add the 
 After this your node will be started. You can check for the existence of a Factom container using the command `docker ps`.
 
 {% hint style="danger" %}
-Please wait for your node to be fully synced by checking the control panel node sync statuses to be 100% before performing any next steps. Please also regard the initial wait period of 20 minutes before doing anything with your node. Furthermore, note that the `factomd:v6.3.1-alpine` version may have changed since the time of writing.
+Please wait for your node to be fully synced by checking the control panel node sync statuses to be 100% before performing any next steps. Please also regard the initial wait period of 20 minutes before doing anything with your node. Furthermore, note that the `factomd:v6.5.2-alpine` version may have changed since the time of writing.
 {% endhint %}
 
 ## Preparing the brain swap

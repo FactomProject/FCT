@@ -1,6 +1,6 @@
 # Generating your server identity
 
-[![Factom protocol: Generating your server identity](http://img.youtube.com/vi/g9FzNtSB7I4/0.jpg)](https://www.youtube.com/watch?v=g9FzNtSB7I4)
+[![](http://img.youtube.com/vi/Vyhw5i6U6mQ/0.jpg)](http://www.youtube.com/watch?v=Vyhw5i6U6mQ)
 
 {% hint style="info" %}
 This tutorial is fully covered in the video shown above.
