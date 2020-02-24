@@ -53,7 +53,7 @@ Proceed by generating the update scripts by running the following in a terminal:
 ```bash
 # Parameters: <Identity root chain ID> <FCT public address> <SK1 private key> <Paying private EC address>
 # Example:
-node bin/factom-identity-cli update-coinbase-address --offline -s courtesy-node.factom.com:80 8888889822cf1d5889aa8dc11ad210b67d582812152de568fabc5f8505989c0f FA3HZDE4MdXAthauFoA3aKYpx33U4fT2kAABmfwk7NBqyLT2zed5 sk12tdaziBoFyBHG56Ery3bPFFBDpy7Y3VymduGPfoj66cGhH4mHZrw Es3ytEKt6t5Jm9juC4kR7EgKQSX8BpRnM4WADtgFoq7j1WgbeEGW
+node bin/factom-identity-cli update-coinbase-address --offline -s https://api.factomd.net/v2 --id 8888889822cf1d5889aa8dc11ad210b67d582812152de568fabc5f8505989c0f --fctaddress FA3HZDE4MdXAthauFoA3aKYpx33U4fT2kAABmfwk7NBqyLT2zed5 --sk1 sk12tdaziBoFyBHG56Ery3bPFFBDpy7Y3VymduGPfoj66cGhH4mHZrw --secaddress Es3ytEKt6t5Jm9juC4kR7EgKQSX8BpRnM4WADtgFoq7j1WgbeEGW
 ```
 
 {% hint style="danger" %}
@@ -70,7 +70,7 @@ Be sure to replace the parameters in the command above with your own:
 ```bash
 # Parameters: <Identity root chain ID> <Efficiency> <SK1 private key> <Paying private EC address> <Server Management Subchain ID>
 # Example:
-node bin/factom-identity-cli update-efficiency --offline -s courtesy-node.factom.com:80 8888889822cf1d5889aa8dc11ad210b67d582812152de568fabc5f8505989c0f 50.1 sk12tdaziBoFyBHG56Ery3bPFFBDpy7Y3VymduGPfoj66cGhH4mHZrw Es3ytEKt6t5Jm9juC4kR7EgKQSX8BpRnM4WADtgFoq7j1WgbeEGW 8888887c01c12c72052f9c99b45782013feadb20c46ca86dc6e3a9730835848a
+node bin/factom-identity-cli update-efficiency --offline -s https://api.factomd.net/v2 --id 8888889822cf1d5889aa8dc11ad210b67d582812152de568fabc5f8505989c0f --efficiency 50.1 --sk1 sk12tdaziBoFyBHG56Ery3bPFFBDpy7Y3VymduGPfoj66cGhH4mHZrw --secaddress Es3ytEKt6t5Jm9juC4kR7EgKQSX8BpRnM4WADtgFoq7j1WgbeEGW --smchainid 8888887c01c12c72052f9c99b45782013feadb20c46ca86dc6e3a9730835848a
 ```
 
 {% hint style="danger" %}
@@ -81,12 +81,18 @@ Be sure to replace the parameters in the command above with your own:
 * SK1 private key
 * Paying private EC address
 * Server Management Subchain ID
+
+Value of the _Server Management Subchain ID_ can be found by looking at the identity root chain id in a Factom explorer: it is the value of the 3rd external id of the entry whose 2nd external id is equal to 'Register Server Management'.
 {% endhint %}
 
-Those two commands will create two scripts if successful:
+Those two commands will create two scripts, if successful:
 
-* `update-coinbase-address.sh`
-* `update-efficiency.sh`
+* `update-coinbase-address.<short_id>.sh`
+* `update-efficiency.<short_id>.sh`
+
+{% hint style="info" %}
+ &lt;_short\_id&gt;_ is the short id of your identity: the first 6 characters after the leading 888888. 
+{% endhint %}
 
 Copy these scripts to your DATA stick, eject it and shut down and destroy the Ubuntu session. 
 
@@ -97,18 +103,18 @@ Copy these scripts to your DATA stick, eject it and shut down and destroy the Ub
 Continue now on the previous system you were working on and plugin the DATA stick. Locate the files and make sure they are executable:
 
 ```bash
-chmod +x update-coinbase-address.sh
-chmod +x update-efficiency.sh
+chmod +x update-coinbase-address.<short_id>.sh
+chmod +x update-efficiency.<short_id>.sh
 ```
 
 Now execute both bash scripts. 
 
 ```bash
-./update-coinbase-address.sh
-./update-efficiency.sh
+./update-coinbase-address.<short_id>.sh
+./update-efficiency.<short_id>.sh
 ```
 
-The scripts simply use `curl` command lines that should be available on most unix based systems. The scripts will make the requests to the Factom Inc. courtesy node \(`courtesy-node.factom.com:80`\). 
+The scripts simply use `curl` command lines that should be available on most unix based systems. The scripts will make the requests to the Factom Open Node \(`https://api.factomd.net/v2`\). 
 
 {% hint style="info" %}
 You can edit the scripts to choose another endpoint by changing the  `HOST=` parameter at the top to localhost or a test-net node for instance.
