@@ -1,5 +1,7 @@
 # Maintenance
 
+[![](http://img.youtube.com/vi/GiMnJvvc3ng/0.jpg)](http://www.youtube.com/watch?v=GiMnJvvc3ng)
+
 ## Updating your node
 
 {% hint style="info" %}
