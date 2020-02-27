@@ -10,7 +10,7 @@ Here is a step by step guide on how to install FF binaries on Mac, Windows, and 
 2. Save it to your desktop or downloads folder on your local hard drive.
 3. Follow the instructions for your OS.
 
-### Mac
+## Mac
 
 This installer is for `factomd`, `factom-walletd`, `factom-cli`, the three binaries will be installed in `/Applications/Factom/` together with a `.factom` folder in the root of the local user Home Folder. These are all required to run Factom via command line.
 
@@ -40,7 +40,7 @@ The installer will proceed with the installation and once finished it will promp
 
 ![Installer Step 4](https://docs.factom.com/images/wallet_009.png)
 
-### Windows
+## Windows
 
 This installer is for `factomd`, `factom-walletd`, `factom-cli`, the three binaries will be installed in `c:\Program Files (x86)\Factom\ or c:\Program Files\Factom\` \(depending on your system\) together with a `.factom` folder in the root of the local user Home Folder. These are all required to run Factom via command line.
 
@@ -78,7 +78,7 @@ When the installation is over select `Finish` to exit the installer.
 
 ![Installer Step 5](https://docs.factom.com/images/wallet_017.png)
 
-### Linux
+## Linux
 
 This installer is for `factomd`, `factom-walletd`, `factom-cli`, the three binaries will be installed on your local drive together with a `.factom` folder in the root of the local user Home Folder `~/.factom`. These are all required to run Factom via command line or the Factom Foundation Wallet.
 
@@ -96,13 +96,13 @@ sudo dpkg -i ./factom-i386.deb
 
 We are aware Linux users are hardcore, so we made sure one command is all they need to be ready to [install Enterprise Wallet](https://docs.factomprotocol.org/wallets/enterprise-wallet)!
 
-### Docker
+## Docker
 
 If you’ve made it this far, you may not have an operating system. This will make it very difficult to run Factom Federation since, at this point, we do still require you to use a computing device. However, if you’re simply looking for a way to get started in ANY environment, you’ve come to the right place.
 
 Because we are a very modern organization, we’ve made arrangements for you to get started in a containerized environment. All you need is [Docker](https://www.docker.com/) at minimum v17 and a clone of the [factomd repo](https://github.com/FactomProject/factomd).
 
-#### **Build**
+### **Build**
 
 From wherever you have cloned the factomd repo, run:
 
@@ -114,7 +114,7 @@ docker build -t factomd_container .
 You can replace **factomd\_container** with whatever you want to call the container. e.g. **factomd**, **foo**, etc.
 {% endhint %}
 
-####  **Cross-Compile** 
+### **Cross-Compile**
 
 To cross-compile for a different target, you can pass in a `build-arg` :
 
@@ -122,7 +122,7 @@ To cross-compile for a different target, you can pass in a `build-arg` :
 docker build -t factomd_container --build-arg GOOS=darwin .
 ```
 
-#### **Run**
+### **Run**
 
 **No Persistence**
 
@@ -158,7 +158,7 @@ In the above**:**
 * replace **factomd\_volume** with whatever you might want to call it - e.g. **myvolume**, **barbaz**, etc.
 {% endhint %}
 
-#### **Additional Flags**
+### **Additional Flags**
 
 In all cases, you can startup with additional flags by passing them at the end of the docker command, e.g.
 
@@ -166,7 +166,7 @@ In all cases, you can startup with additional flags by passing them at the end o
 docker run --rm -p 8090:8090 factomd_container -port 9999
 ```
 
-#### **Copy**
+### **Copy**
 
 ```text
 docker run --rm --entrypoint='' \

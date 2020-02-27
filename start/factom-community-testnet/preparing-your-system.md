@@ -1,6 +1,6 @@
 # Installation
 
-[![Factom protocol: Getting started with the basics](http://img.youtube.com/vi/luJucKvHsB4/0.jpg)​](https://www.youtube.com/watch?v=luJucKvHsB4)​
+[![](http://img.youtube.com/vi/Hf7UHzeo1Xs/0.jpg)](http://www.youtube.com/watch?v=Hf7UHzeo1Xs)
 
 {% hint style="info" %}
 This complete tutorial is fully covered in the video shown above.
@@ -58,7 +58,7 @@ This should then generate the «hello-world» image.
 
 ## Securing your node
 
-[![Factom protocol: Securing your node with SSH and iptables](http://img.youtube.com/vi/VIr9OT7ZRp0/0.jpg)​](https://www.youtube.com/watch?v=VIr9OT7ZRp0)​
+[![](http://img.youtube.com/vi/7JBx-ZmBpz4/0.jpg)](http://www.youtube.com/watch?v=7JBx-ZmBpz4)
 
 {% hint style="info" %}
 This part of the tutorial is covered in the video shown above.
@@ -158,7 +158,7 @@ AuthorizedKeysFile .ssh/authorized_keys # keyfile location
 
 ## Setting up and installing factomd
 
-[![Factom protocol: Choose VPS and join the Docker Swarm](http://img.youtube.com/vi/Qghv05RCMcE/0.jpg)​](https://www.youtube.com/watch?v=Qghv05RCMcE)​
+[![](http://img.youtube.com/vi/RmHVlvgTeFg/0.jpg)](http://www.youtube.com/watch?v=RmHVlvgTeFg)
 
 {% hint style="info" %}
 This part of tutorial is covered in the video shown above.
@@ -282,7 +282,7 @@ Only accept logins at [https://testnet.federation.factomd.com](https://testnet.f
 Run the following command _exactly:_
 
 ```bash
-docker run -d --name "factomd" -v "factom_database:/root/.factom/m2" -v "factom_keys:/root/.factom/private" -p "8088:8088" -p "8090:8090" -p "8110:8110" -l "name=factomd" factominc/factomd:v6.3.1-rc1-alpine -broadcastnum=16 -network=CUSTOM -customnet=fct_community_test -startdelay=600 -faulttimeout=120 -config=/root/.factom/private/factomd.conf
+docker run -d --name "factomd" -v "factom_database:/root/.factom/m2" -v "factom_keys:/root/.factom/private" -p "8088:8088" -p "8090:8090" -p "8110:8110" -l "name=factomd" factominc/factomd:v6.5.0-p2p2-beta1-alpine -network=CUSTOM -customnet=fct_community_test -startdelay=600 -faulttimeout=120 -config=/root/.factom/private/factomd.conf
 ```
 
 {% hint style="info" %}
@@ -317,7 +317,7 @@ Please wait for your node to be fully synced by checking the control panel node 
 
 ## Generating your server identity
 
-[![Factom protocol: Generating your server identity](http://img.youtube.com/vi/g9FzNtSB7I4/0.jpg)​](https://www.youtube.com/watch?v=g9FzNtSB7I4)​
+[![](http://img.youtube.com/vi/Vyhw5i6U6mQ/0.jpg)](http://www.youtube.com/watch?v=Vyhw5i6U6mQ)
 
 {% hint style="info" %}
 This part of the tutorial is covered in the video shown above.
