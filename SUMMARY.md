@@ -67,6 +67,7 @@
   * [Importing/Exporting your private key\(s\)](wallets/enterprise-wallet/import-private-key.md)
   * [Select Your Factomd Node](wallets/enterprise-wallet/select-your-factomd-node.md)
   * [Upgrade to a Secure Wallet](wallets/enterprise-wallet/upgrade-to-a-secure-wallet.md)
+* [FAT Wallet](wallets/fat-wallet.md)
 * [MyFactomWallet](wallets/myfactomwallet.md)
 * [Paper Wallet](wallets/paper-wallet.md)
 
