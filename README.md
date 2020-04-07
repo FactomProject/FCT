@@ -22,16 +22,16 @@ You don't need to learn a new language to build on top of the Factom Protocol.  
 
 [Rust Client Library ](https://github.com/kompendium-llc/factom-rust-client)- Rust json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.
 
-[Haskell Client Library](https://github.com/kompendium-llc/factom-haskell-client) - Haskell json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
+[Haskell Client Library](https://github.com/kompendium-ano/factom-haskell-client) - Haskell json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
 
 
-[PHP Client Library](https://github.com/kompendium-llc/factom-php-client) - PHP json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
+[PHP Client Library ](https://github.com/kompendium-ano/factom-php-client)- PHP json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
 
 
-[Ruby Client Library](https://github.com/kompendium-llc/factom-ruby-client) - Ruby json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
+[Ruby Client Library](https://github.com/kompendium-ano/factom-ruby-client) - Ruby json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
 
 
-[Swift client Library](https://github.com/kompendium-llc/factom-swift-client) - Swift json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
+[Swift client Library ](https://github.com/kompendium-ano/factom-swift-client)- Swift json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
 
 
 
