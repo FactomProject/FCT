@@ -4,11 +4,9 @@ The Factom blockchain comprises of more than 190 000 blocks, at the time of writ
 
 Exploring Factom blocks manually via the Factom Explorer can be very insightful and informative for users looking to understand Factom’s [data structure design](https://developers.factomprotocol.org/start/factom-data-structures). Furthermore, it provides important information such as FCT or EC balance visually, without having to run our software. 
 
-The Factom Explorer is accessible at [https://explorer.factom.com](https://explorer.factom.com). 
+**There are multiple Factom Blockchain Explorers, run by different parties:**
 
-There is also an alternative explorer, ran by The Factoid Authority, which can be found [here](https://explorer.factoid.org/).
-
-###  <a id="search-for-fct-ec-addresses"></a>
-
-
+1. Factom Inc. Explorer — [https://explorer.factom.com](https://explorer.factom.com)
+2. TFA Explorer — [https://explorer.factoid.org](https://explorer.factoid.org)
+3. Factom Realtime Explorer — [https://explorer.factom.pro](https://explorer.factom.pro)
 
