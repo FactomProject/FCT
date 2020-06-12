@@ -51,7 +51,6 @@
 
 ## Protocol development
 
-* [Bug Bounty](protocol-development/bug-bounty-program.md)
 * [Factom Improvement Proposals](protocol-development/factom-improvement-proposals.md)
 * [Hacking Factom](protocol-development/hacking-factom.md)
 
