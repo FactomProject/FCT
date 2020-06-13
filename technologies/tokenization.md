@@ -1,68 +1,97 @@
-# Tokenization
+---
+description: A tokenization protocol on top of Factom chains and entries
+---
 
-Factom Asset Tokens \(FAT\) are a collection of open source, data-only blockchain tokenization standards. FAT Tokens open up affordable, secure crypto tokens to the world.  
+# FAT Tokenization
 
+[Factom Asset Tokens](https://www.fatprotocol.org/) \(FAT\) are a collection of open source, data-only blockchain tokenization standards. FAT Tokens open up affordable, secure crypto tokens to the world.
 
-**Low Fixed Cost**
+{% embed url="https://www.youtube.com/watch?v=bdp7DsrX7hY" %}
 
-Fixed at $0.001 USD per transaction and $0.012 USD per new token issuance, FAT has 99% lower transaction and issuance costs than Ethereum Tokens with [similar features](https://github.com/Factom-Asset-Tokens/FAT/blob/master/FAQ#is-fat-comparable-with-ethereum?) and speed.  
+## FAT Features
 
+#### **Low Fixed Cost**
 
-**Universal**
+Fixed at $0.001 USD per transaction and $0.011 USD per new token issuance, FAT has 99% lower transaction and issuance costs than Ethereum Tokens with [similar features](https://github.com/Factom-Asset-Tokens/FAT/blob/master/FAQ#is-fat-comparable-with-ethereum?) and speed.
 
-FAT standards are data only, and are written in universal formats that most programmers already know, and anyone can learn \(JSON\). There is no need to learn contract languages or other specialized tools.  
+#### **Universal**
 
+FAT standards are data only, and are written in universal formats that most programmers already know, and anyone can learn \(JSON\). There is no need to learn contract languages or other specialized tools.
 
-**Extensible**
+#### **Extensible**
 
-FAT standards and tokens are composable and extensible by design, and are made to be extended to the limit of creativity. Metadata is embeddable in issuances and transactions for unlimited flexibility.  
+FAT standards and tokens are composable and extensible by design, and are made to be extended to the limit of creativity. Metadata is embeddable in issuances and transactions for unlimited flexibility.
 
+#### **Safe**
 
-**Safe**
+Sending and issuing FAT tokens does not require buying crypto from exchanges. The tokens used to pay for FAT transactions & issuances, [Entry Credits](https://www.factom.com/devs/tokens/entry-credits), are not securities and are [purchasable online instantly](https://shop.factom.com/).
 
-Sending and issuing FAT tokens does not require buying crypto from exchanges. The tokens used to pay for FAT transactions & issuances, [Entry Credits](https://www.factom.com/devs/tokens/entry-credits), are not securities and are [purchasable online instantly](https://shop.factom.com/).  
+#### **Secure**
 
+FAT is built on [Factom](https://github.com/Factom-Asset-Tokens/FAT/blob/master), a decentralized Blockchain run by 100s of community members and over 40 verified enterprise companies worldwide. Every 10 Minutes Factom's data is recorded into the Bitcoin Blockchain to prove it's existence and secure it forever.
 
-**Secure**
+#### Smart Contracts \(Alpha\)
 
-FAT is built on [Factom](https://github.com/Factom-Asset-Tokens/FAT/blob/master), a decentralized Blockchain run by 100s of community members and over 40 verified enterprise companies worldwide. Every 10 Minutes Factom's data is recorded into the Bitcoin Blockchain to prove it's existence and secure it forever.  
+FAT supports smart contracts written in WebAssembly which reside at FAT token addresses. Contracts are written in WebAssembly, a bytecode format programmable in multiple popular languages such as C, C++, Rust, Typescript.
 
+Smart contracts can receive, send, create tokens programmatically.
 
-**Token Types**
+#### **Multiple Token Types**
 
-FAT features several types and is always adding more. You can create your own too!:  
+FAT features several token types and is always adding more. You can create your own too!:
 
-
-[**FAT-0**](https://github.com/Factom-Asset-Tokens/FAT/blob/master/fatips/0.md)
-
-A fungible asset token standard.
+[**FAT-0**](https://github.com/Factom-Asset-Tokens/FAT/blob/master/fatips/0.md)**:** A fungible asset token standard.
 
 * Most alike an ERC-20 token \(TRON, Golem, Ziliqa\):
   * Tradable in fractions of a token
+* Supports smart contracts written in WebAssembly\(Alpha\)
 
-[**FAT-1**](https://github.com/Factom-Asset-Tokens/FAT/blob/master/fatips/1.md)
-
-A non-fungible asset token standard.
+[**FAT-1**](https://github.com/Factom-Asset-Tokens/FAT/blob/master/fatips/1.md)**:** A non-fungible asset token standard.
 
 * Most alike an ERC-721 token \(CryptoKitties\)
   * Tradable in whole number token increments
-  * Every token is unique, and can have unique properties
+  * Every token is unique, and can have unique properties\(metadata\)
   * Tokens have a history of the addresses they've resided at
 
-[**FAT-13**](https://github.com/Factom-Asset-Tokens/FAT/blob/master/fatips/13.md) **\(Work In Progress\)**
+## **Getting Started**
 
-A fungible, mineable asset token standard.
+Check out our [**Getting Started Guide**](https://docs.google.com/document/d/1dh3NrjKLqqjr737A-UI1EezE_TROHIzxw7W5djK21sM/edit) for the Factom Testnet to issue your first token!
 
-* Most alike Bitcoin:
-  * Parties do proof of work to mine tokens
-  * Tradable in fractions of a token
+### FAT Software
 
-**Getting Started**
+#### FAT Daemon
 
-The easiest way to get started exploring, issuing, accepting, and trading FAT tokens is by using the latest official [FAT Wallet Release](https://github.com/Factom-Asset-Tokens/wallet/releases). The wallet is available as an executable for Windows, Mac, or Linux.
+A daemon written in Golang that discovers new Factom Asset Tokens chains and maintains their current state. The daemon provides a JSON-RPC 2.0 API for accessing data about token chains. Comes packaged with a command line interface for issuing and sending tokens.
 
-You can also use a [library or API](https://github.com/Factom-Asset-Tokens/FAT#libraries) to programmatically issue, interact with, and send FAT tokens from your code.  
+[FAT Daemon Github](https://github.com/Factom-Asset-Tokens/fatd)
 
+#### **FAT Wallet**
+
+A user facing wallet for receiving and sending fungible and non-fungible FAT tokens. The wallet is available as an executable for Windows, Mac, or Linux.
+
+[FAT Wallet Github](https://github.com/Factom-Asset-Tokens/wallet)
+
+#### FAT Javascript/NodeJS Library
+
+Create and sign token issuances and transactions in Javascript. Interact with a FAT Daemon in NodeJS or from the browser. Supports all existing FAT Daemon RPC endpoints.
+
+[FAT-JS Github](https://github.com/Factom-Asset-Tokens/fat-js)
+
+### FAT Courtesy Nodes
+
+A courtesy node is a FAT Daemon hosted for public access on the cloud that allows developers to use FAT without needing to run or maintain their own FAT Daemon. Courtesy nodes can be used with the FAT Wallet, FAT Daemon CLI, and FAT-JS projects to access data about and send FAT tokens.
+
+#### Testnet
+
+0.fat.testnet.dbgrow.com:8078
+
+#### Mainnet
+
+0.mainnet.fat.dbgrow.com:8078
+
+#### 
+
+### FAQ
 
 **What Is The FAT Wallet?**
 
@@ -105,14 +134,14 @@ Using the wallet you can issue new tokens for your application or organization's
 
 Once you've set your parameters you can add an initial set of recipients to receive the newly created tokens. After issuance, you can sell your tokens using traditional business processes or integrate them into your application's functionality to implement token economies.
 
-In the near future, FAT tokens will support smart contract functionality to allow holding trustless token sales\(ICOs\), evaluating outside data sources \(APIs\), and much more rich functionality.
+## FAT Resources
 
-[**Full Specifications**](https://github.com/Factom-Asset-Tokens)  
-****
+* [Factom Asset Tokens Website](https://www.fatprotocol.org/)
+  * [Factom Asset Tokens Testnet Explorer](https://www.fatprotocol.org/explorer)
+  * [Factom Asset Tokens Contact Us](mailto:contact@fatprotocol.org?subject=FAT%20Protocol%20Contact%20Us)
+* [Factom Asset Token Specifications Repository](https://github.com/Factom-Asset-Tokens/FAT)
+* [Factom Asset Tokens Testnet Explorer](https://explorer.factoid.org/data?type=fat-tokens) \(TFA\)
+* * [Factom Asset Token Discord Community](https://discord.com/invite/8ADPfSc)
 
-[**Factom Asset Token Community**](https://discord.gg/8ADPfSc)  
-****
-
-[**Contact Us**](https://dbgrow.com/contact.html)  
 
 

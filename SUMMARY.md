@@ -46,7 +46,7 @@
 
 ## Technologies
 
-* [Tokenization](technologies/tokenization.md)
+* [FAT Tokenization](technologies/tokenization.md)
 * [Voting Protocols](technologies/voting-protocols.md)
 
 ## Protocol development
