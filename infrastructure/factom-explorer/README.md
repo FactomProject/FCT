@@ -6,7 +6,11 @@ Exploring Factom blocks manually via the Factom Explorer can be very insightful 
 
 **There are multiple Factom Blockchain Explorers, run by different parties:**
 
-1. Factom Inc. Explorer — [https://explorer.factom.com](https://explorer.factom.com)
-2. TFA Explorer — [https://explorer.factoid.org](https://explorer.factoid.org)
-3. Factom Realtime Explorer — [https://explorer.factom.pro](https://explorer.factom.pro)
+Factom Realtime Explorer — [https://explorer.factom.pro](https://explorer.factom.pro)  
+TFA Explorer — [https://explorer.factoid.org](https://explorer.factoid.org)  
+Factom Inc. Explorer — [https://explorer.factom.com](https://explorer.factom.com)
+
+
+
+
 
