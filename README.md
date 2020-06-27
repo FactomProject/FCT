@@ -31,7 +31,7 @@ You don't need to learn a new language to build on top of the Factom Protocol.  
 [Ruby Client Library](https://github.com/kompendium-ano/factom-ruby-client) - Ruby json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
 
 
-[Swift client Library ](https://github.com/kompendium-ano/factom-swift-client)- Swift json-rpc client library for communicating with factomd, factom-walletd, debug APIs provided by reference implementation of Factom protocol. Includes examples and wide test coverage.  
+[Swift client Library ](https://github.com/kompendium-ano/factom-swift-client)- Swift json-rpc client library for communicating with    factomd, factom-walletd, debug APIs provided by  reference implementation of Factom protocol. Includes examples and wide test coverage.  
 
 
 
