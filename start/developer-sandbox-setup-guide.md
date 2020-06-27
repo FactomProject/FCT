@@ -388,7 +388,7 @@ docker exec -it fct-sandbox factom-cli newecaddress
 You should see an EC address returned \(it starts with `EC`\). Write down this address as well, as we’ll be using it later.
 
 {% hint style="success" %}
-Your Factom sandbox container is now setup, you're now ready to interact with the Factom blockchain! Why not follow one of the hello-world examples for your favorite client? Head over to the [Hello-world examples](https://developers.factomprotocol.org/start/hello-world-examples) section for an overview.
+Your Factom sandbox container is now setup, you're now ready to interact with the Factom blockchain! Why not follow one of the hello-world examples for your favorite client? Head over to the [Hello-world examples](https://developers.factomprotocol.org/start/hello-world-examples) section for an overview..
 {% endhint %}
 
 ## Resetting the Blockchain

@@ -74,7 +74,7 @@ Select `Yes` to continue if you get the following message.
 
 ![Windows Prompt 3](https://docs.factom.com/images/wallet_016.png)
 
-When the installation is over select `Finish` to exit the installer.
+When the installation is over select `Finish` to exit the installer..
 
 ![Installer Step 5](https://docs.factom.com/images/wallet_017.png)
 

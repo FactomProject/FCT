@@ -35,7 +35,7 @@ The Founders of Factom realized that many businesses and governments will want t
 
 2. Cryptocurrencies tend to be highly volatile and companies need to be able to budget effectively to use something like the Factom Protocol. If the token you use is $5.00 one day, $30.00 a week later, and $2.00 a month later, you can’t effectively budget.
 
-As such, the Founders came up with an absolutely brilliant solution. They created Entry Credits \(EC\) in addition to Factoids thus inventing the two-token system and isolate the use of the protocol from the tradable token. It is ENTRY CREDITS that allow you to enter data into the Factom Protocol. One EC allows you to enter up to 1kb of data and costs $.001. Note it’s not .001 FCT, but $.001. You receive EC by burning FCT and that FCT \(and all fees\) are removed completely \(burned\) thus reducing future inflation. To reinforce the fact that EC are priced in dollars, not FCT, note that:
+As such, the Founders came up with an absolutely brilliant solution. They created Entry Credits \(EC\) in addition to Factoids thus inventing the two-token system and isolate the use of the protocol from the tradable token. It is ENTRY CREDITS that allow you to enter data into the Factom Protocol. One EC allows you to enter up to 1kb of data and costs $.001. Note it’s not .001 FCT, but $.001. You receive EC by burning FCT and that FCT \(and all fees\) are removed completely \(burned\) thus reducing future inflation.. To reinforce the fact that EC are priced in dollars, not FCT, note that:
 
 If one FCT is worth $1.00 and you burn it, you get 1,000 EC
 
@@ -47,7 +47,9 @@ This solves the two problems:
 
 1. Companies and governments don’t have to hold cryptocurrency if they don’t want to or can’t.
 
-2. Companies and governments can effectively budget for the cost of using the protocol because the cost for EC will be $.001 each.
+2. Companies and governments can effectively budget for the cost of using the protocol because the cost for EC will be $.001 each.  
+  
+
 
 
 
