@@ -83,7 +83,7 @@ A courtesy node is a FAT Daemon hosted for public access on the cloud that allow
 
 #### Testnet
 
-0.fat.testnet.dbgrow.com:8078
+0.testnet.fat.dbgrow.com:8078
 
 #### Mainnet
 
